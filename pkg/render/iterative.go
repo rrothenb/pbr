@@ -14,7 +14,7 @@ import (
 	"golang.org/x/text/message"
 )
 
-func Iterative(scene *Scene, file string, width, height, depth int, direct bool) error {
+func Iterative(scene *Scene, file string, width, height, depth int, direct bool, maxSeconds int) error {
 	kill := make(chan os.Signal, 2)
 	signal.Notify(kill, os.Interrupt, syscall.SIGTERM)
 
@@ -37,6 +37,9 @@ func Iterative(scene *Scene, file string, width, height, depth int, direct bool)
 				fmt.Print(".")
 				if err := writePng(file, sample.Image()); err != nil {
 					return err
+				}
+				if time.Now().UnixNano() - start > int64(maxSeconds) * 1e9 {
+					frame.Stop()
 				}
 			}
 		}
