@@ -8,7 +8,7 @@ import (
 
 	"github.com/gorilla/handlers"
 
-	"github.com/hunterloftis/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/render"
 )
 
 // curl -H "Accept-Encoding: gzip" http://localhost:5000/scene > /dev/null

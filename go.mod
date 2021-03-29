@@ -2,8 +2,6 @@ module github.com/rrothenb/pbr
 
 go 1.16
 
-replace github.com/hunterloftis/pbr => github.com/rrothenb/pbr v2.0.0+incompatible
-
 require (
 	github.com/Opioid/rgbe v0.0.0-20141201200131-01612e3f14b6
 	github.com/alexflint/go-arg v0.0.0-20180516182405-f7c0423bd11e

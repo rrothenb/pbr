@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hunterloftis/pbr/pkg/camera"
-	"github.com/hunterloftis/pbr/pkg/env"
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/material"
-	"github.com/hunterloftis/pbr/pkg/render"
-	"github.com/hunterloftis/pbr/pkg/rgb"
-	"github.com/hunterloftis/pbr/pkg/surface"
+	"github.com/rrothenb/pbr/pkg/camera"
+	"github.com/rrothenb/pbr/pkg/env"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/material"
+	"github.com/rrothenb/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/rgb"
+	"github.com/rrothenb/pbr/pkg/surface"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 	e := env.NewGradient(rgb.Black, rgb.Energy{750, 750, 750}, 7)
 
 	scene := render.NewScene(c, s, e)
-	err := render.Iterative(scene, "hello.png", 898, 450, 8, true)
+	err := render.Iterative(scene, "hello.png", 898, 450, 8, true, 30)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "\nError: %v\n", err)
 	}

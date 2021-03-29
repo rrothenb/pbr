@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hunterloftis/pbr/pkg/camera"
-	"github.com/hunterloftis/pbr/pkg/env"
-	"github.com/hunterloftis/pbr/pkg/format/obj"
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/material"
-	"github.com/hunterloftis/pbr/pkg/render"
-	"github.com/hunterloftis/pbr/pkg/rgb"
-	"github.com/hunterloftis/pbr/pkg/surface"
+	"github.com/rrothenb/pbr/pkg/camera"
+	"github.com/rrothenb/pbr/pkg/env"
+	"github.com/rrothenb/pbr/pkg/format/obj"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/material"
+	"github.com/rrothenb/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/rgb"
+	"github.com/rrothenb/pbr/pkg/surface"
 )
 
 func main() {
@@ -44,5 +44,5 @@ func run() error {
 	tree := surface.NewTree(surfaces...)
 	scene := render.NewScene(camera, tree, environment)
 
-	return render.Iterative(scene, "sponza.png", 1280, 720, 8, true)
+	return render.Iterative(scene, "sponza.png", 1280, 720, 8, true, 30)
 }

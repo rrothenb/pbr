@@ -6,14 +6,14 @@ import (
 	"strings"
 	"runtime/pprof"
 
-	"github.com/hunterloftis/pbr/pkg/camera"
-	"github.com/hunterloftis/pbr/pkg/env"
-	"github.com/hunterloftis/pbr/pkg/format/obj"
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/material"
-	"github.com/hunterloftis/pbr/pkg/render"
-	"github.com/hunterloftis/pbr/pkg/rgb"
-	"github.com/hunterloftis/pbr/pkg/surface"
+	"github.com/rrothenb/pbr/pkg/camera"
+	"github.com/rrothenb/pbr/pkg/env"
+	"github.com/rrothenb/pbr/pkg/format/obj"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/material"
+	"github.com/rrothenb/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/rgb"
+	"github.com/rrothenb/pbr/pkg/surface"
 )
 
 var materials = map[string]surface.Material{
@@ -111,5 +111,5 @@ func run(o *Options) error {
 	scene := render.NewScene(camera, tree, environment)
 
 	fmt.Println("Surfaces:", len(surfaces))
-	return render.Iterative(scene, o.Out, o.Width, o.Height, o.Bounce, !o.Indirect)
+	return render.Iterative(scene, o.Out, o.Width, o.Height, o.Bounce, !o.Indirect, 30)
 }

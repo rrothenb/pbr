@@ -4,8 +4,8 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/rgb"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/rgb"
 )
 
 // Simple, perfect refraction with no roughness

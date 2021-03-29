@@ -5,12 +5,12 @@ import (
 	"math"
 	"os"
 
-	"github.com/hunterloftis/pbr/pkg/camera"
-	"github.com/hunterloftis/pbr/pkg/env"
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/material"
-	"github.com/hunterloftis/pbr/pkg/render"
-	"github.com/hunterloftis/pbr/pkg/surface"
+	"github.com/rrothenb/pbr/pkg/camera"
+	"github.com/rrothenb/pbr/pkg/env"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/material"
+	"github.com/rrothenb/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/surface"
 )
 
 func main() {
@@ -48,5 +48,5 @@ func run() error {
 	)
 	scene := render.NewScene(cam, surf, sky)
 
-	return render.Iterative(scene, "shapes.png", 800, 450, 6, true)
+	return render.Iterative(scene, "shapes.png", 800, 450, 6, true, 30)
 }

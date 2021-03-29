@@ -3,7 +3,7 @@ package bsdf
 import (
 	"math"
 
-	"github.com/hunterloftis/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/geom"
 )
 
 // Schlick's approximation of Fresnel

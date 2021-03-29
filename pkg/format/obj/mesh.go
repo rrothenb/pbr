@@ -1,9 +1,9 @@
 package obj
 
 import (
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/render"
-	"github.com/hunterloftis/pbr/pkg/surface"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/surface"
 )
 
 type Mesh struct {

@@ -3,10 +3,10 @@ package material
 import (
 	"math/rand"
 
-	"github.com/hunterloftis/pbr/pkg/bsdf"
-	"github.com/hunterloftis/pbr/pkg/geom"
-	"github.com/hunterloftis/pbr/pkg/render"
-	"github.com/hunterloftis/pbr/pkg/rgb"
+	"github.com/rrothenb/pbr/pkg/bsdf"
+	"github.com/rrothenb/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/render"
+	"github.com/rrothenb/pbr/pkg/rgb"
 )
 
 const reflect = 1.0 / 2.0

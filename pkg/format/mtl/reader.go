@@ -16,8 +16,8 @@ import (
 
 	_ "github.com/ftrvxmtrx/tga"
 
-	"github.com/hunterloftis/pbr/pkg/material"
-	"github.com/hunterloftis/pbr/pkg/rgb"
+	"github.com/rrothenb/pbr/pkg/material"
+	"github.com/rrothenb/pbr/pkg/rgb"
 )
 
 // http://exocortex.com/blog/extending_wavefront_mtl_to_support_pbr

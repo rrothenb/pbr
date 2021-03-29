@@ -4,7 +4,7 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/hunterloftis/pbr/pkg/geom"
+	"github.com/rrothenb/pbr/pkg/geom"
 )
 
 // SLR generates rays from a simulated physical camera into a Scene.
